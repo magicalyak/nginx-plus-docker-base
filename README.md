@@ -18,6 +18,8 @@ etc/
 │    │   └── proxy_headers/
 │    │       └─── proxy_headers.conf .....Best practice headers to pass to backend proxied servers
 │    └── stream.conf.d/ **ADD your TCP and UDP Stream configurations here**
+├── html/
+│    └──demo-index.html ..........Status page for dummy servers
 └── ssl/
     └── nginx/
     │   ├── nginx-repo.crt...........NGINX Plus repository certificate file (**Use your own license here**)
