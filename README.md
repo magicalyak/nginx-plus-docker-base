@@ -38,18 +38,18 @@ html/
  2. Build an image from your Dockerfile:
     ```bash
     # Run command from the folder containing the `Dockerfile`
-    $ docker build -t nginx-plus .
+    $ docker build -t nginx-plus-alpine .
     ```
  3. Start the Nginx Plus container, e.g.:
     ```bash
     # Start a new container and publish container ports 80, 443 and 8080 to the host
-    $ docker run -d -p 80:80 -p 443:443 -p 8080:8080 nginx-plus
+    $ docker run -d -p 80:80 -p 443:443 -p 8080:8080 nginx-plus-alpine
     ```
 
     **To mount local volume:**
 
     ```bash
-    docker run -d -p 80:80 -p 443:443 -p 8080:8080 -v $PWD/etc/nginx:/etc/nginx nginx-plus
+    docker run -d -p 80:80 -p 443:443 -p 8080:8080 -v $PWD/etc/nginx:/etc/nginx nginx-plus-alpine
     ```
 
  4. To run commands in the docker container you first need to start a bash session inside the nginx container
