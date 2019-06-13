@@ -18,19 +18,22 @@ etc/
 │    │   └── proxy_headers/
 │    │       └─── proxy_headers.conf .....Best practice headers to pass to backend proxied servers
 │    └── stream.conf.d/ **ADD your TCP and UDP Stream configurations here**
-├── html/
-│    └──demo-index.html ..........Status page for dummy servers
 └── ssl/
     └── nginx/
     │   ├── nginx-repo.crt...........NGINX Plus repository certificate file (**Use your own license here**)
     │   └── nginx-repo.key...........NGINX Plus repository key file (**Use your own license here**)
     ├── example.com.key...........Self generated certificate for testing
     └── example.com.crt...........Self signed private key for testing
+html/
+└──demo-index.html ..........Status page for dummy servers
 ```
 
 ## Build Docker container
 
  1. Copy and paste your `nginx-repo.crt` and `nginx-repo.key` into `etc/ssl/nginx` directory first
+   ```bash
+   $ cp ~/nginx-repo.* etc/ssl/nginx/
+   ```
 
  2. Build an image from your Dockerfile:
     ```bash
