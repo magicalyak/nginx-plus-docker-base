@@ -43,6 +43,8 @@ RUN chown -R nginx:nginx /etc/nginx \
  # **Remove the Nginx Plus cert/keys from the image**
  && rm /etc/apk/cert.pem /etc/apk/cert.key
 
+COPY html/demo-index.html /usr/share/nginx/html
+
 # EXPOSE ports, HTTP 80, HTTPS 443 and, Nginx status page 8080
 EXPOSE 80 443 8080
 STOPSIGNAL SIGTERM
